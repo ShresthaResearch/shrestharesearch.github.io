@@ -18,23 +18,39 @@ header {
     background: linear-gradient(45deg, #007bff, #0056b3);
     color: #ffffff;
     padding: 4rem 0;
-    text-align: center;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 header h1 {
-    font-family: 'Lora', serif;
+    font-family: 'Tinos', serif;
     font-size: 3.5rem;
     margin: 0;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 header .subtitle {
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 400;
     opacity: 0.9;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.uno-logo {
+    height: 80px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.header-text {
+    text-align: right;
 }
 
 main {
@@ -165,6 +181,15 @@ footer {
 
     header h1 {
         font-size: 2.8rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .uno-logo {
+        height: 60px;
     }
 
     .details-grid {
