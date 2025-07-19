@@ -5,10 +5,12 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #495057;
+    font-size: 16px;
 }
 
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
     padding: 0 20px;
@@ -81,13 +83,13 @@ h2 {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
 .photo-grid img {
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -148,17 +150,31 @@ ul li strong {
     display: inline-block;
     background-color: #007bff;
     color: #fff;
-    padding: 12px 25px;
+    padding: 15px 30px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 700;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    min-height: 44px;
+    box-sizing: border-box;
 }
 
 #application a:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
     text-decoration: none;
+}
+
+.google-form-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-form-container iframe {
+    width: 100%;
+    border: none;
 }
 
 footer {
@@ -172,27 +188,155 @@ footer {
 @media(max-width: 768px) {
     .container {
         width: 95%;
+        padding: 0 15px;
     }
 
     header {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        padding: 3rem 0;
+        padding: 2.5rem 0;
     }
 
     header h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    header .subtitle {
+        font-size: 1.1rem;
+        margin-top: 10px;
     }
 
     .header-content {
         flex-direction: column;
         gap: 20px;
+        text-align: center;
+    }
+
+    .header-text {
+        text-align: center;
     }
 
     .uno-logo {
         height: 60px;
     }
 
+    section {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
     .details-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+    }
+
+    ul li {
+        padding: 10px 0;
+        font-size: 0.95rem;
+    }
+
+    .google-form-container iframe {
+        height: 600px;
+    }
+}
+
+/* Small mobile devices */
+@media(max-width: 480px) {
+    .container {
+        width: 98%;
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 2rem 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    header .subtitle {
+        font-size: 1rem;
+    }
+
+    .uno-logo {
+        height: 50px;
+    }
+
+    section {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    #application a {
+        padding: 15px 20px;
+        font-size: 1rem;
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .google-form-container iframe {
+        height: 500px;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Large tablets and small desktops */
+@media(min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 3.2rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 35px;
     }
 }
