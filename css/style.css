@@ -73,12 +73,14 @@ section:hover {
 }
 
 h2 {
-    font-family: 'Lora', serif;
+    font-family: 'Montserrat', 'Nunito', 'Lora', serif;
     color: #0056b3;
     border-bottom: 3px solid #e9ecef;
     padding-bottom: 15px;
     margin-bottom: 30px;
     font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-weight: 800;
 }
 
 .photo-grid {
@@ -123,8 +125,10 @@ h2 {
 .card h3 {
     margin-top: 0;
     color: #0056b3;
-    font-family: 'Lora', serif;
+    font-family: 'Montserrat', 'Nunito', 'Lora', serif;
     font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    font-weight: 700;
 }
 
 ul {
@@ -334,6 +338,8 @@ footer {
     flex: 1;
     font-size: 1.1rem;
     line-height: 1.7;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .apply-now-green-btn {
