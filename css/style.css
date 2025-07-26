@@ -146,25 +146,6 @@ ul li strong {
     font-weight: 700;
 }
 
-#application a {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    min-height: 44px;
-    box-sizing: border-box;
-}
-
-#application a:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-    text-decoration: none;
-}
-
 .google-form-container {
     width: 100%;
     overflow: hidden;
@@ -339,4 +320,39 @@ footer {
     section {
         padding: 35px;
     }
+}
+
+/* About Grant Flex Layout */
+.about-grant-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.about-grant-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.apply-now-green-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #fff;
+    font-weight: 700;
+    padding: 0.85em 2em;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(67, 233, 123, 0.15);
+    text-decoration: none;
+    font-size: 1.15rem;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    margin-left: 2rem;
+}
+
+.apply-now-green-btn:hover {
+    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+    box-shadow: 0 4px 16px rgba(67, 233, 123, 0.25);
+    transform: translateY(-2px) scale(1.04);
 }
