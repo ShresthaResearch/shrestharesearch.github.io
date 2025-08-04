@@ -1,3 +1,7 @@
+/* Prevent line break for 'this Google form' link in application section */
+.nowrap-link {
+    white-space: nowrap;
+}
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.8;
@@ -240,6 +244,29 @@ footer {
 
     .google-form-container iframe {
         height: 600px;
+    }
+
+    /* Stack Apply Now button above text in about-grant-flex on small screens */
+    .about-grant-flex {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 1.2rem;
+    }
+    .apply-now-green-btn {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        align-self: center;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        text-align: center;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        overflow-wrap: break-word;
+        display: block;
+    }
+    .about-grant-text {
+        text-align: justify;
     }
 }
 
